@@ -2,6 +2,7 @@
 by - ACRafi
 
 This code takes in a system of linear equations in augmented matrix form and outputs its solution after transforming it into its Row Echelon and Reduced Row Echelon Form using Gaussian Elimination.
+
 #Function Description#
 turn_pos_zero() :-
 This function basically implements the elemantary row operation {R1 -> R1 + c.R2}. It takes two rows(in vector of floats form) R1 & R2, value of their pivots p1 & p2 and the size of the rows(same for all rows) as arguments. As the pivot of the second row needs to turn 0, we choose our constant, c to be -p1/p2. And then plus/minus(depends on the pairity of the pivots) this constant times the corresponding element of the second row from the corresponding element of the first row and store the new transformed elements in the vector. Because there are floats involved, we set a limit for the values. We also store the position of the new pivot of the row at the end of the vector(extracted later outside the function)
